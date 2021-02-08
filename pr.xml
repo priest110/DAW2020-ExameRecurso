@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pr>
+    <meta>
+        <key>DAW 2020 Exame Recurso</key>
+        <title>Exame Recurso de DAW</title>
+        <bdate>08-02-2021</bdate>
+        <edate>08-02-2021</edate>
+        <supervisor>jcr@di.uminho.pt</supervisor>
+    </meta>
+    <team>
+        <member id="a83610">
+            <name>Rui Nuno Borges Cruz Oliveira</name>
+            <email>a83610@alunos.uminho.pt</email>
+        </member>
+    </team>
+    <abstract>
+        <p> Para importar os dados no ex.1, utilizei o comando: <b> mongoimport -d PEI2020 -c teams --jsonArray equipas.json</b></p>
+        <p> Para o ex.2 utilizei o ficheiro <i>queriesMongos.txt</> para guardar a resolução das mesmas.</p>
+        <p> Para o ex.4, utilizei dois servidores diferentes(ex3 e ex4, com as portas 8001 e 8002, respetivamente) que comunicam entre si. Foi desenvolvida uma interface, cuja página principal deveria obter uma tabela com as listas das equipas, porém, a forma como estou a consultar a mesma está errada, logo, não é possível ver a mesma, sendo que o click numa lista levaria para a página pessoal de uma rquipa. No entanto, o mesmo não acontece para a página pessoal de cada equipa, sendo possível obter resultados visuais. Relativamente às restantes páginas não consegui desenvolver os forms atempadamente.
+    </abstract>
+    <deliverables>
+        <link url="/pr.xml">Project Record Xml</link>
+        <link url="/Ex1">Ex1</link>
+    </deliverables>
+</pr>
