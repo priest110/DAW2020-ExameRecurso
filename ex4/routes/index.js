@@ -26,9 +26,9 @@ router.post('/teams', function(req, res) {
     .catch(e => res.render('error', {error: e}));
 });
 
-/* POST produto */
+/* POST member */
 router.post('/teams/:id/members', function(req, res) {
-  axios.post('http://localhost:8001/api/teams/'+req.params.id + '/produtos?token=' + req.cookies.token, req.body)
+  axios.post('http://localhost:8001/api/teams/'+req.params.id + '/members?token=' + req.cookies.token, req.body)
   	.then(dados => res.render('team', {title: "DAW-PRI-2020 Recurso", teams: dados.data}))
     .catch(e => res.render('error', {error: e}));
 });
@@ -40,9 +40,9 @@ router.delete('/teams/:id', function(req, res) {
     .catch(e => res.render('error', {error: e}));
 });
 
-/* DELETE produto*/
+/* DELETE member */
 router.delete('/teams/:id/members/:idMember', function(req, res) {
-  axios.delete('http://localhost:8001/api/teams/' + req.params.id + '/produtos' + req.params.idMember)
+  axios.delete('http://localhost:8001/api/teams/' + req.params.id + '/members' + req.params.idMember)
   	.then(dados => res.render('team', {title: "DAW-PRI-2020 Recurso", teams: dados.data}))
     .catch(e => res.render('error', {error: e}));
 });
