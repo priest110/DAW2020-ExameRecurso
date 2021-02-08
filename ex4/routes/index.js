@@ -42,7 +42,7 @@ router.delete('/teams/:id', function(req, res) {
 
 /* DELETE member */
 router.delete('/teams/:id/members/:idMember', function(req, res) {
-  axios.delete('http://localhost:8001/api/teams/' + req.params.id + '/members' + req.params.idMember +'?token=' + req.cookies.token)
+  axios.delete('http://localhost:8001/api/teams/' + req.params.id + '/members/' + req.params.idMember +'?token=' + req.cookies.token)
   	.then(dados => res.render('team', {title: "DAW-PRI-2020 Recurso", teams: dados.data}))
     .catch(e => res.render('error', {error: e}));
 });
