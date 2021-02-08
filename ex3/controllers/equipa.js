@@ -1,7 +1,7 @@
 var Team = require('../models/equipa')
 
 module.exports.lista_teams = () => {
-	return Compra
+	return Team
 		.aggregate([
 			{"$unwind":"$members"},
 			{"$group":{
@@ -54,11 +54,6 @@ module.exports.insere_member= (id,member) => {
 		.exec()
 }
 
-module.exports.lista_categorias= () => {
-	return Compra
-		.distinct('produtos.categoria')
-		.exec()
-}
 
 module.exports.remove_team = (id) => {
 	return Team
