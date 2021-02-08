@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  .w3-container.w3-margin
+    table.w3-table-all
+      tr
+        th Team
+        th Pitch1
+        th Pitch2
+        th TechPitch
+        th BusinessReport
+        th TechReport
+        th Número de Membros
+      each team in teams
+        tr(id=team.id)
+          th
+            a(href='/teams/'+te._id)= team.team
+          th
+            a(href='/teams/'+team._id)= team.pitch1
+          th
+          	a(href='/teams/'+team._id)= team.pitch2
+          th
+          	a(href='/teams/'+team._id)= team.techPitch
+          th
+          	a(href='/teams/'+team._id)= team.businessReport	
+          th
+          	a(href='/teams/'+team._id)= team.techReport		
+          th
+          	a(href='/teams/'+team._id)= team.nmembers	

@@ -1,0 +1,45 @@
+extends layout
+
+block content
+  .w3-top
+    .w3-bar.w3-green
+      h1="id: " + team._id
+  br
+  br
+  br
+  .w3-container.w3-margin
+    .w3-container.w3-margin
+        h2 Infos
+        h5 
+          strong Team: 
+          | #{team.team}
+        h5 
+          strong Pitch1: 
+          | #{team.pitch1}
+        h5 
+          strong Pitch2: 
+          | #{team.pitch2}
+        h5 
+          strong TechPitch:
+          | #{team.techPitch} 
+        h5 
+          strong BusinessReport:
+          | #{team.businessReport }  
+        h5 
+          strong TechReport:
+          | #{team.techReport }  
+
+        h4 Members
+          each member in team.members
+            li #{member.id}
+            li #{member.name}
+            li #{member.course}
+            ul
+               h4 Scores
+               -var tam = member.scores.length
+               -var i = 0
+               -while(i < tam)
+                  li #{member.scores[i]}
+                  -i++
+        
+    button.w3-button.w3-blue-gray(type='button', id='home', onclick='window.location.href="/";') Homepage
